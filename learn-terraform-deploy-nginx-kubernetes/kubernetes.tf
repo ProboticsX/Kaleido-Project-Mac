@@ -3,6 +3,10 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
     }
+    kaleido = {
+      source = "kaleido-io/kaleido"
+      version = "0.2.15"
+    }
   }
 }
 

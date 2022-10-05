@@ -35,7 +35,7 @@ variable "node_size" {
 
 variable "node_count" {
   type = string
-  default = 4
+  default = 2
   description = "Count of nodes to create - each will have its own membership"
 }
 
