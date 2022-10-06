@@ -19,3 +19,24 @@ provider "registry.terraform.io/hashicorp/kubernetes" {
     "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
   ]
 }
+
+provider "registry.terraform.io/kaleido-io/kaleido" {
+  version     = "0.2.15"
+  constraints = "0.2.15"
+  hashes = [
+    "h1:qA3i6SJaiwsO/OTpz0L8MSrocdeqTOiJzWO4jausw7U=",
+    "zh:0352fac4c87cb970d3dea2887a00b1374fdd38dfb816d58abd0d53b394aba11b",
+    "zh:0d149da98d49dd6909d09b7687a13005b40c8fab8e4c2396e5821b0ba50ff03d",
+    "zh:50123f2bc1e6a3a87fd2e41e88c733fefe0c576005927ae36ba5e19d64e79bfd",
+    "zh:56addc24fcafdf0a4c98722ed3efb3ed3e50d59ddf03982789c718051af91e2e",
+    "zh:70b3a41b3dfb16250ab91758210b10bc9220e0b6eb9bcdcca4e2d5480c6aa05b",
+    "zh:75b6898cccdff9f7e3cdf2d3cb9d46464ed15f32efd770f6c5c311e53baf0dc0",
+    "zh:a2c736919eace8eccd7aeca10f8d42b206ef0c04e1e67a05e1244469a8db60a8",
+    "zh:d7c3f70769240e42a62d8cb2d625fc655976f3749c39fe1115654afc8894c04f",
+    "zh:e5f87fdecfb498f61059828889d705f253da667a47e8a9b8bea6570556e2b917",
+    "zh:ee7534922f0c86f1d81ed1d9d1fdb3523425dafbd9e47c7a607865fb8df7389a",
+    "zh:f0a1404e7f9a04f2ab3e149fcd064994ded5a6323ef2815dd7345627aaa837f3",
+    "zh:f52d5d05b27ce1df2fd02829657c08037e41565a2a7e85d961c427e630be048b",
+    "zh:faee7030e2c7b708cfe52bce22b8c846c9239da8681c4b2b16156e1582a47454",
+  ]
+}
