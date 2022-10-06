@@ -16,3 +16,8 @@
 - Set up the Sandbox and Firefly Dashboard manually
 
 ![Screen Shot 2022-10-05 at 12 53 30 AM (2)](https://user-images.githubusercontent.com/36927669/193984160-bf221b7b-5c34-4940-9dde-7329f65025a7.png)
+
+- Followed the doc to find out how to deploy smart contract for `simplestorage.sol`
+
+<img width="1440" alt="Screen Shot 2022-10-06 at 6 44 13 PM" src="https://user-images.githubusercontent.com/36927669/194432121-0c68cb4b-3ea6-4268-9b19-c11af76fe77e.png">
+
