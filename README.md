@@ -21,3 +21,7 @@
 
 <img width="1440" alt="Screen Shot 2022-10-06 at 6 44 13 PM" src="https://user-images.githubusercontent.com/36927669/194432121-0c68cb4b-3ea6-4268-9b19-c11af76fe77e.png">
 
+- Smart Contract Deployed
+<img width="1440" alt="Screen Shot 2022-10-08 at 4 55 33 PM" src="https://user-images.githubusercontent.com/36927669/194727841-c32ddfee-8cbf-45a9-a2bb-9981c56309f6.png">
+
+
