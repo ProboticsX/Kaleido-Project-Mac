@@ -1,0 +1,51 @@
+# config:
+#   debugEnabled: true
+#   adminEnabled: true
+#   preInit: true
+
+#   organizationName: "firefly-os"
+#   organizationKey: "firefly-os"
+
+#   fabconnectUrl: "http://fabconnect.firefly-os"
+
+#   postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
+#   postgresAutomigrate: true
+
+#   ipfsApiUrl: "http://ipfs.firefly-os:5001"
+#   ipfsGatewayUrl: "http://ipfs.firefly-os:8080"
+
+# dataexchange:
+#   certificate:
+#     enabled: true
+#     issuerRef:
+#       kind: ClusterIssuer
+#       name: selfsigned-ca
+
+#   tlsSecret:
+#     enabled: false
+
+config:
+  debugEnabled: true
+  adminEnabled: true
+  preInit: true
+
+  organizationName: "Org 1"
+  organizationKey: "0xf9d07b8332359de8e37ed654b0b5211c008cf22f"
+
+  fabconnectUrl: "http://fabconnect.firefly-os"
+
+  postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
+  postgresAutomigrate: true
+
+  ipfsApiUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
+  ipfsGatewayUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
+
+dataexchange:
+  certificate:
+    enabled: true
+    issuerRef:
+      kind: ClusterIssuer
+      name: selfsigned-ca
+
+  tlsSecret:
+    enabled: false
