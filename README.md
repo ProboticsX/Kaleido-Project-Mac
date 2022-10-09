@@ -25,3 +25,11 @@
 <img width="1440" alt="Screen Shot 2022-10-08 at 4 55 33 PM" src="https://user-images.githubusercontent.com/36927669/194727841-c32ddfee-8cbf-45a9-a2bb-9981c56309f6.png">
 
 
+- `Postgres` setup complete using `make deps`
+<img width="1440" alt="Screen Shot 2022-10-09 at 2 12 21 PM" src="https://user-images.githubusercontent.com/36927669/194772915-649118f6-4c58-4dfa-9457-0155779e83dd.png">
+
+- All charts installed using `make test` - using the original values given inside yaml files
+
+<img width="1440" alt="Screen Shot 2022-10-09 at 2 12 07 PM" src="https://user-images.githubusercontent.com/36927669/194772949-5e70b12c-aeea-4dab-9884-98a0411d970e.png">
+
+
