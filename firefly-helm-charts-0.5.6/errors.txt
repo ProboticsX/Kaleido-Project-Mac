@@ -1,0 +1,83 @@
+shubham@Rachits-Air firefly-helm-charts-0.5.6 % kubectl get pods
+NAME                                                     READY   STATUS             RESTARTS      AGE
+alertmanager-kube-prometheus-kube-prome-alertmanager-0   2/2     Running            1 (83s ago)   86s
+firefly-0                                                0/1     CrashLoopBackOff   1 (6s ago)    31s
+firefly-dx-0                                             0/1     Running            0             31s
+firefly-sandbox-79b774f8f8-sfppc                         0/1     Running            0             31s
+kube-prometheus-kube-prome-operator-b67c8f9c-m7wq7       1/1     Running            0             88s
+postgresql-client                                        1/1     Running            0             53s
+postgresql-postgresql-0                                  1/1     Running            0             78s
+prometheus-kube-prometheus-kube-prome-prometheus-0       2/2     Running            0             85s
+shubham@Rachits-Air firefly-helm-charts-0.5.6 % kubectl describe pod firefly-0
+Name:             firefly-0
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             kind-control-plane/172.18.0.2
+Start Time:       Mon, 10 Oct 2022 22:31:32 -0400
+Labels:           app.kubernetes.io/component=core
+                  app.kubernetes.io/instance=firefly
+                  app.kubernetes.io/name=firefly
+                  controller-revision-hash=firefly-d4d957694
+                  statefulset.kubernetes.io/pod-name=firefly-0
+Annotations:      checksum/config: 5f5ff12c637059645dee60d4e76df54b611721597b24b8a216b42de671df0c7c
+Status:           Running
+IP:               10.244.0.20
+IPs:
+  IP:           10.244.0.20
+Controlled By:  StatefulSet/firefly
+Containers:
+  firefly:
+    Container ID:   containerd://6a7ca3c43d85e266e1d65dccb51bc43a3ad58fc3ee4f8a1de7748d5093f6bc53
+    Image:          ghcr.io/hyperledger/firefly:v1.0.4
+    Image ID:       ghcr.io/hyperledger/firefly@sha256:f9139be74080e6291b24978617e5edbd5ec1629cc1c5ca1e1d240033ac15128a
+    Ports:          5000/TCP, 6060/TCP, 5001/TCP, 5100/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP, 0/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Mon, 10 Oct 2022 22:32:13 -0400
+      Finished:     Mon, 10 Oct 2022 22:32:14 -0400
+    Ready:          False
+    Restart Count:  2
+    Liveness:       tcp-socket :http delay=10s timeout=1s period=5s #success=1 #failure=5
+    Readiness:      tcp-socket :http delay=0s timeout=1s period=3s #success=3 #failure=10
+    Environment:
+      FIREFLY_NODE_NAME:  default-firefly
+    Mounts:
+      /etc/firefly/ from firefly-config (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-vzdpq (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+Volumes:
+  firefly-config:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  firefly-config
+    Optional:    false
+  kube-api-access-vzdpq:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age               From               Message
+  ----     ------     ----              ----               -------
+  Normal   Scheduled  47s               default-scheduler  Successfully assigned default/firefly-0 to kind-control-plane
+  Normal   Pulling    47s               kubelet            Pulling image "ghcr.io/hyperledger/firefly:v1.0.4"
+  Normal   Pulled     28s               kubelet            Successfully pulled image "ghcr.io/hyperledger/firefly:v1.0.4" in 18.488068591s
+  Normal   Created    6s (x3 over 28s)  kubelet            Created container firefly
+  Normal   Started    6s (x3 over 28s)  kubelet            Started container firefly
+  Normal   Pulled     6s (x2 over 23s)  kubelet            Container image "ghcr.io/hyperledger/firefly:v1.0.4" already present on machine
+  Warning  Unhealthy  5s (x8 over 28s)  kubelet            Readiness probe failed: dial tcp 10.244.0.20:5000: connect: connection refused
+  Warning  BackOff    2s (x6 over 21s)  kubelet            Back-off restarting failed container
