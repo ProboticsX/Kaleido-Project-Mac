@@ -36,7 +36,8 @@ charts/firefly/local-values.yaml:
 	cp ./charts/firefly/ci/eth-values.yaml charts/firefly/local-values.yaml
 
 deploy:
-	helm upgrade -i firefly ./charts/firefly -f ./charts/firefly/local-values.yaml
+	helm upgrade -i firefly ./charts/firefly --debug -f ./charts/firefly/local-values.yaml
+	#helm template ./charts/firefly --debug -f ./charts/firefly/local-values.yaml
 
 test:
 	ct install --namespace default --helm-extra-args="--timeout 120s" --charts charts/firefly
