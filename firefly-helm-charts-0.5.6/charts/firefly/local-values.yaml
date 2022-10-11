@@ -8,18 +8,13 @@ config:
   organizationKey: "0xf9d07b8332359de8e37ed654b0b5211c008cf22f"
   fireflyContractAddress: "0xdf31679a0e53069a8aa007f94fadc4a7d47b5593"
 
-  ethconnectUrl: "https://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io//"
+  ethconnectUrl: "https://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io"
 
   postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
   postgresAutomigrate: true
 
-<<<<<<< HEAD
   ipfsApiUrl: "https://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
   ipfsGatewayUrl: "https://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
-=======
-  ipfsApiUrl: "http://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
-  ipfsGatewayUrl: "http://u0he1sww0t:lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM-VPA@u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
->>>>>>> 39498eba79f381a1caf566e6d735ae808b5dec24
 
   #addresssResolverUrlTemplate: "http://address-resolver.firefly-os/wallets/{{.Key}}"  
 
