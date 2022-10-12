@@ -1,3 +1,8 @@
+core:
+  jobs:
+    registration:
+      enabled: true
+      
 config:
   debugEnabled: true
   adminEnabled: true
@@ -6,13 +11,13 @@ config:
 
   organizationName: "Org 1"
   organizationKey: "0xf9d07b8332359de8e37ed654b0b5211c008cf22f"
-  fireflyContractAddress: "/instances/0xdf31679a0e53069a8aa007f94fadc4a7d47b5593"
-
+  #fireflyContractAddress: "/instances/0xdf31679a0e53069a8aa007f94fadc4a7d47b5593"
+  fireflyContractAddress: "/instances/0x17a3a4d50f05603d8593a71bd79d853c03cede79"
 
   ethconnectUsername: "u0he1sww0t"
   ethconnectPassword: "lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM"
   ethconnectUrl: "https://u0g0yrqy4r-u0xm0vhxib-connect.us0-aws.kaleido.io"
-  
+
   #not working ethconnectUrl: "https://u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io/"
 
   postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
@@ -22,17 +27,16 @@ config:
   ipfsApiUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
   ipfsGatewayUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
 
-  # httpTls:
-  #   caFile: /etc/pki/internal/ca.crt
-  #   certFile: /etc/pki/internal/tls.crt
-  #   keyFile: /etc/pki/internal/tls.key
-  #   enabled: true
-  #   clientAuth: true
 
-# core:
+# ethconnect:
+#   enabled: true
+
+#   config:
+#     jsonRpcUrl: "https://u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io/"
+
 #   jobs:
-#     registration:
-#       enabled: true
+#     registerContracts:
+#       enabled: false
 
 # ethconnect:
 #   jobs:
@@ -52,9 +56,7 @@ config:
 #           name: my-ipfs-basic-auth
 #           key: lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM
 
-  # ipfsApiUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io/ipfs/Qmbo8PfVs4WWanjFPMboP8Gx5hunN1Tn5kLMmhvB3L1LVd"
-  # ipfsGatewayUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io/ipfs/Qmbo8PfVs4WWanjFPMboP8Gx5hunN1Tn5kLMmhvB3L1LVd"
-  #addresssResolverUrlTemplate: "http://address-resolver.firefly-os/wallets/{{.Key}}"  
+   #addresssResolverUrlTemplate: "http://address-resolver.firefly-os/wallets/{{.Key}}"  
 
 core:
   metrics:
