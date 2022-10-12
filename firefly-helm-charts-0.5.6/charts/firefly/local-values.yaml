@@ -1,132 +1,41 @@
-core:
-  jobs:
-    registration:
-      enabled: true
-      
 config:
   debugEnabled: true
   adminEnabled: true
   metricsEnabled: true
   preInit: false
 
-  organizationName: "Org 1"
+  organizationName: "Student"
   organizationKey: "0xf9d07b8332359de8e37ed654b0b5211c008cf22f"
-  #fireflyContractAddress: "/instances/0xdf31679a0e53069a8aa007f94fadc4a7d47b5593"
   fireflyContractAddress: "/instances/0x17a3a4d50f05603d8593a71bd79d853c03cede79"
 
   ethconnectUsername: "u0he1sww0t"
   ethconnectPassword: "lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM"
   ethconnectUrl: "https://u0g0yrqy4r-u0xm0vhxib-connect.us0-aws.kaleido.io"
 
-  #not working ethconnectUrl: "https://u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io/"
-
   postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
   postgresAutomigrate: true
+
   ipfsGatewayUsername: "u0he1sww0t"
   ipfsGatewayPassword: "lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM"
+  ipfsApiUsername: "u0he1sww0t"
+  ipfsApiPassword: "lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM"
   ipfsApiUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
   ipfsGatewayUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
 
-
-# ethconnect:
-#   enabled: true
-
-#   config:
-#     jsonRpcUrl: "https://u0g0yrqy4r-u0xm0vhxib-rpc.us0-aws.kaleido.io/"
-
-#   jobs:
-#     registerContracts:
-#       enabled: false
-
-# ethconnect:
-#   jobs:
-#     registerContracts:
-#       enabled: true
-
-# core:
-#   extraEnv:
-#     - name: FIREFLY_PUBLICSTORAGE_IPFS_API_AUTH_USERNAME
-#       valueFrom:
-#         secretKeyRef:
-#           name: my-ipfs-basic-auth
-#           key: u0he1sww0t
-#     - name: FIREFLY_PUBLICSTORAGE_IPFS_API_AUTH_PASSWORD
-#       valueFrom:
-#         secretKeyRef:
-#           name: my-ipfs-basic-auth
-#           key: lZY3PRnXJTfw59xEzYqxfG0SzKfBYV0Dsr17RLLelYM
-
-   #addresssResolverUrlTemplate: "http://address-resolver.firefly-os/wallets/{{.Key}}"  
 
 core:
   metrics:
     serviceMonitor:
       enabled: true
-
-  # extraVolumeMounts: |
-  #   - name: firefly-mtls
-  #     mountPath: /etc/pki/internal/
-
-  # extraVolumes: |
-  #   - name: firefly-mtls
-  #     secret:
-  #       secretName: firefly-mtls-tls
+  jobs:
+    registration:
+      enabled: true
 
 dataexchange:
+  tlsSecret:
+    enabled: false
   certificate:
     enabled: true
     issuerRef:
       name: selfsigned-ca
       kind: ClusterIssuer
-
-  tlsSecret:
-    enabled: false
-
-
-# config:
-#   debugEnabled: true
-#   adminEnabled: true
-#   metricsEnabled: true
-#   preInit: true
-
-#   organizationName: "Org 1"
-#   organizationKey: "0xf9d07b8332359de8e37ed654b0b5211c008cf22f"
-#   fireflyContractAddress: "instances/0xdf31679a0e53069a8aa007f94fadc4a7d47b5593"
-
-#   ethconnectUrl: "https://u0g0yrqy4r-u0xm0vhxib-connect.us0-aws.kaleido.io"
-
-#   postgresUrl: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
-#   postgresAutomigrate: true
-
-#   ipfsApiUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
-#   ipfsGatewayUrl: "https://u0g0yrqy4r-u0eojoyk7y-ipfs.us0-aws.kaleido.io"
-
-# core:
-#   extraEnv:
-#     - name: FIREFLY_DATABASE_POSTGRES_URL
-#       valueFrom:
-#         secretKeyRef:
-#           name: custom-psql-config
-#           key: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
-#   jobs:
-#     postgresMigrations:
-#       enabled: true
-#       extraEnv:
-#         - name: PSQL_URL
-#           valueFrom:
-#             secretKeyRef:
-#               name: custom-psql-config
-#               key: "postgres://postgres:firef1y@postgresql.default.svc:5432?sslmode=disable"
-#     metrics:
-#       serviceMonitor:
-#         enabled: true
-
-# dataexchange:
-#   certificate:
-#     enabled: true
-#     issuerRef:
-#       kind: ClusterIssuer
-#       name: selfsigned-ca
-
-#   tlsSecret:
-#     enabled: false
