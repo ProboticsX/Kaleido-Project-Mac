@@ -1,5 +1,7 @@
 # Kaleido-Project-Mac
 
+# Part 1
+
 - Deployed `nginx` on Kubernetes cluster using `terraform`
 
 <img width="1430" alt="Screen Shot 2022-10-04 at 1 55 01 PM" src="https://user-images.githubusercontent.com/36927669/193900405-02436b7d-1453-44fc-862e-60ff9662cc82.png">
@@ -12,6 +14,8 @@
     - You're nodes and IPFS cluster should be created on the Kaleido's Environment Dashboard.
     
     <img width="1440" alt="Screen Shot 2022-10-04 at 9 04 14 PM" src="https://user-images.githubusercontent.com/36927669/193957569-4b9d1909-2d59-4c21-9a85-b82e478299ea.png">
+
+# Part 2
 
 - Set up the Sandbox and Firefly Dashboard manually
 
@@ -31,5 +35,11 @@
 - All charts installed using `make test` - using the original values given inside yaml files
 
 <img width="1440" alt="Screen Shot 2022-10-09 at 2 12 07 PM" src="https://user-images.githubusercontent.com/36927669/194772949-5e70b12c-aeea-4dab-9884-98a0411d970e.png">
+
+- Able to access the Firefly UI on `http://127.0.0.1:8080/ui`
+
+<img width="1440" alt="Screen Shot 2022-10-12 at 4 33 33 PM" src="https://user-images.githubusercontent.com/36927669/195446850-488d0e37-efdc-430e-8ebc-2b80a933dc00.png">
+
+
 
 
