@@ -37,10 +37,11 @@
 <img width="1440" alt="Screen Shot 2022-10-12 at 4 33 33 PM" src="https://user-images.githubusercontent.com/36927669/195446850-488d0e37-efdc-430e-8ebc-2b80a933dc00.png">
 
   Steps:
-    - Go inside `firefly-helm-charts-0.5.6` and run `make kind` to create the `kind` cluster
-    - Run `make deps` to spin up the cluster with Postgress, DX, etc.
-    - Run `make deploy` to deploy the firefly node on cluster and copy-paste the steps it asks you to run, it should look something like this:
+    -  Go inside `firefly-helm-charts-0.5.6` and run `make kind` to create the `kind` cluster
+    -  Run `make deps` to spin up the cluster with Postgress, DX, etc.
+    -  Run `make deploy` to deploy the firefly node on cluster and copy-paste the steps it asks you to run, it should look something like this:
 
+<img width="1440" alt="Screen Shot 2022-10-13 at 1 40 21 AM" src="https://user-images.githubusercontent.com/36927669/195511327-f3f23ebc-8b17-4014-8ed6-6cc0e2e97570.png">
 
 # Part 3
 
